@@ -21,12 +21,38 @@
     <finalName>${artifactId}</finalName>
     <plugins>
       <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <configuration>
+          <descriptor>src/assembly/bin.xml</descriptor>
+          <!-- choose zip file name -->
+          <finalName>app</finalName>
+          <archive>
+            <manifest>
+               <!-- choose main class name -->
+              <mainClass>App</mainClass>
+            </manifest>
+          </archive>
+          <descriptorRefs>
+            <descriptorRef>jar-with-dependencies</descriptorRef>
+          </descriptorRefs>
+        </configuration>
+        <executions>
+          <execution>
+            <id>make-assembly</id> 
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
         <version>${maven-surefire-plugin.version}</version>
         <configuration>
           <includes>
-            <include>**/*Should.java</include>
+            <include>**/*Test*.java</include>
           </includes>
         </configuration>
       </plugin>

@@ -20,13 +20,19 @@
     <fileSet filtered="true" packaged="true">
       <directory>src/test/java</directory>
       <includes>
-        <include>**/*Should.java</include>
+        <include>**/*Test*.java</include>
       </includes>
     </fileSet>
     <fileSet>
       <directory>src/test/resources</directory>
       <includes>
         <include>**/.gitkeep</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" packaged="false">
+      <directory>src/assembly</directory>
+      <includes>
+        <include>**/*.xml</include>
       </includes>
     </fileSet>
   </fileSets>

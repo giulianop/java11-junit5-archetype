@@ -1,0 +1,18 @@
+<assembly>
+    <id/>
+    <formats>
+        <format>zip</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+
+    <fileSets>
+        <fileSet>
+            <directory>src/main/java/</directory>
+            <outputDirectory>./</outputDirectory>
+            <includes>
+                <include>**/*.java</include>
+            </includes>
+            <lineEnding>unix</lineEnding>
+        </fileSet>
+    </fileSets>
+</assembly>

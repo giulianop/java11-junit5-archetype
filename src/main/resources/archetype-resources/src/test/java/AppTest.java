@@ -6,7 +6,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 import org.junit.jupiter.api.Test;
 
-public class AppShould {
+public class AppTest {
 
   @Test
   void add_two_numbers() {
